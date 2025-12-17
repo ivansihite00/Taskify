@@ -1,16 +1,49 @@
-# tubes_pm
+# Taskify ✅
 
-A new Flutter project.
+Taskify adalah aplikasi manajemen tugas (To-Do List) berbasis mobile yang dirancang untuk membantu pengguna mengatur aktivitas sehari-hari dengan efisien. Aplikasi ini memiliki antarmuka modern (Dark Mode) yang terinspirasi dari Google Tasks dan dilengkapi dengan fitur pengingat notifikasi lokal.
 
-## Getting Started
+## 📱 Fitur Utama
 
-This project is a starting point for a Flutter application.
+* **Manajemen Tugas:** Tambah, Edit, Hapus, dan Tandai tugas sebagai selesai.
+* **Pengelompokan (Task Groups):** Atur tugas dalam berbagai kategori daftar (List).
+* **Prioritas:** Tandai tugas penting dengan fitur "Starred".
+* **Pengingat Pintar (Smart Reminder):** Notifikasi alarm terjadwal yang berjalan secara lokal (Local Notifications) bahkan saat layar mati.
+* **Timezone Support:** Mendukung zona waktu lokal (WIB/Asia Jakarta) untuk akurasi alarm.
+* **Modern UI:** Tampilan Dark Mode yang elegan dan responsif.
+* **Data Persistence:** Penyimpanan data tugas secara lokal (Shared Preferences) agar data tidak hilang saat aplikasi ditutup.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Teknologi yang Digunakan
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* **Framework:** Flutter (Dart)
+* **State Management:** `setState` (Native)
+* **Local Storage:** `shared_preferences`
+* **Notifications:** `flutter_local_notifications`
+* **Time & Date:** `timezone`, `intl`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Cara Instalasi
+
+1.  **Clone repository ini:**
+    ```bash
+    git clone [https://github.com/ivansihite00/Taskify.git](https://github.com/ivansihite00/Taskify.git)
+    ```
+2.  **Masuk ke direktori project:**
+    ```bash
+    cd Taskify
+    ```
+3.  **Install dependencies:**
+    ```bash
+    flutter pub get
+    ```
+4.  **Jalankan aplikasi:**
+    ```bash
+    flutter run
+    ```
+
+## 👨‍💻 Pengembang
+
+* **Nama:** Ivan Daniel Sihite
+* **NIM:** 231402119
+* **Mata Kuliah:** Pemrograman Mobile (Tubes)
+
+---
+*Dibuat dengan ❤️ menggunakan Flutter.*
