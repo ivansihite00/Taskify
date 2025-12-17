@@ -41,8 +41,8 @@ Taskify adalah aplikasi manajemen tugas (To-Do List) berbasis mobile yang diranc
 
 ## 👨‍💻 Pengembang
 
-* **Nama:** Ivan Daniel Sihite
-* **NIM:** 231402119
+* **Nama:** Ivan Daniel Sihite (231402119)
+* **Nama:** Arman Dewangga Bagedo Silalahi (231402129)
 * **Mata Kuliah:** Pemrograman Mobile (Tubes)
 
 ---
