@@ -1,6 +1,6 @@
 # Taskify ✅
 
-Taskify adalah aplikasi manajemen tugas (To-Do List) berbasis mobile yang dirancang untuk membantu pengguna mengatur aktivitas sehari-hari dengan efisien. Aplikasi ini memiliki antarmuka modern (Dark Mode) yang terinspirasi dari Google Tasks dan dilengkapi dengan fitur pengingat notifikasi lokal.
+Taskify adalah aplikasi manajemen tugas (To-Do List) berbasis mobile yang dirancang untuk membantu pengguna mengatur aktivitas sehari-hari dengan efisien. Aplikasi ini memiliki antarmuka modern (Dark Mode) dan dilengkapi dengan fitur pengingat notifikasi lokal.
 
 ## 📱 Fitur Utama
 
