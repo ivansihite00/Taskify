@@ -10,13 +10,16 @@ android {
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+    compileOptions { // PERBAIKAN: Sebelumnya tertulis ccompileOptions
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+        // Mengaktifkan desugaring agar fitur Java 8+ bisa jalan di Android lama
+        isCoreLibraryDesugaringEnabled = true 
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
     defaultConfig {
@@ -41,4 +44,10 @@ android {
 
 flutter {
     source = "../.."
+}
+
+// PERBAIKAN: Tambahkan blok dependencies ini di paling bawah
+dependencies {
+    // Library ini wajib ada jika isCoreLibraryDesugaringEnabled = true
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 }

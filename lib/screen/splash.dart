@@ -1,63 +1,110 @@
 import 'package:flutter/material.dart';
-import 'package:tubes_pm/screen/task.dart';
+import 'task.dart'; // Pastikan import ke halaman utama (TaskPage)
 
-class SplashPage extends StatefulWidget {
+class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
-}
-
-class _SplashPageState extends State<SplashPage> {
-  @override
   Widget build(BuildContext context) {
+    // WARNA DARK MODE (Sesuai tema aplikasi)
+    final Color kBackground = const Color(0xFF1F1F1F);
+    final Color kBlueGoogle = const Color(0xFF8AB4F8);
+    final Color kTextWhite = const Color(0xFFE3E3E3);
+    final Color kTextGrey = const Color(0xFFAAAAAA);
+
     return Scaffold(
-        backgroundColor: Color.fromRGBO(212, 255, 221, 1),
-        body: Center(
-          child:SafeArea(child:  Column(
+      backgroundColor: kBackground, // Background Hitam
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
-              SizedBox(
-                height: 120,
-              ),
-              Image.asset("assets/logo.png"),
-              SizedBox(
-                height: 47,
-              ),
-              Image.asset("assets/welcome.png"),
-
-              SizedBox(
-                height: 20,
-              ),
-
+              const Spacer(),
+              
+              // GAMBAR ILUSTRASI
+              // Pastikan gambarnya transparan (PNG) agar menyatu dengan background gelap
+              // Kalau gambarmu punya background hijau kotak, nanti akan terlihat kotak.
+              // Jika belum ada gambar yang pas, saya ganti pakai Icon besar sementara.
               Container(
-                width: 273,
-                height: 60,
-                child: Text("Plan your day and stay productive",style: TextStyle(fontSize: 20),maxLines: 2,)),
+                height: 250,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  // color: Colors.transparent, 
+                ),
+                child: Icon(
+                  Icons.task_alt_rounded, // Icon Checklist Besar
+                  size: 150,
+                  color: kBlueGoogle,
+                ),
+                // Jika mau pakai gambar asetmu, hapus child Icon di atas dan pakai ini:
+                // child: Image.asset("assets/welcome_image.png", fit: BoxFit.contain),
+              ),
+              
+              const SizedBox(height: 40),
 
-              SizedBox(
-                height: 57,
+              // JUDUL
+              Text(
+                "WELCOME TO\nTASKIFY",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.0,
+                  color: kTextWhite, // Teks Putih
+                  height: 1.2,
+                ),
+              ),
+              
+              const SizedBox(height: 16),
+
+              // SUBTITLE
+              Text(
+                "Plan your day and stay\nproductive",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: kTextGrey, // Teks Abu
+                  height: 1.5,
+                ),
               ),
 
-             SizedBox(
-              width: 322,
-              height: 67,
-              child:  ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromRGBO(94, 205, 118, 1),
-                  foregroundColor: Colors.white
+              const Spacer(),
+
+              // TOMBOL GET STARTED
+              SizedBox(
+                width: double.infinity,
+                height: 55,
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Pindah ke Halaman Utama (TaskPage)
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const TaskPage()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: kBlueGoogle, // Tombol Biru
+                    foregroundColor: const Color(0xFF1F1F1F), // Teks Tombol Hitam (Kontras)
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                  child: const Text(
+                    "Get Started",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-                onPressed: (){
-
-                  Navigator.push(context, MaterialPageRoute<void>(builder: (context) => const TaskPage(),));
-
-              }, child: Text("Get Started",style: TextStyle(
-                fontSize: 24
-              ),)),
-             ),
+              ),
+              const SizedBox(height: 20),
             ],
-          ),)
+          ),
         ),
+      ),
     );
   }
 }
